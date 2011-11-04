@@ -57,6 +57,7 @@ exploiting the full functionality of the package).
 %doc %{_texmfdistdir}/source/generic/pst-dbicons/pst-dbicons.drv
 %doc %{_texmfdistdir}/source/generic/pst-dbicons/pst-dbicons.dtx
 %doc %{_texmfdistdir}/source/generic/pst-dbicons/pst-dbicons.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,3 +68,5 @@ exploiting the full functionality of the package).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
