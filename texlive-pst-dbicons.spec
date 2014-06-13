@@ -6,7 +6,7 @@
 # catalog-version 0.16
 Name:		texlive-pst-dbicons
 Version:	0.16
-Release:	6
+Release:	7
 Summary:	Support for drawing ER diagrams
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-dbicons
