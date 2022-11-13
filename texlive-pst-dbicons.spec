@@ -1,19 +1,13 @@
-# revision 17556
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pst-dbicons
-# catalog-date 2006-08-27 16:41:02 +0100
-# catalog-license lppl
-# catalog-version 0.16
 Name:		texlive-pst-dbicons
-Version:	0.16
-Release:	12
+Version:	17556
+Release:	1
 Summary:	Support for drawing ER diagrams
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-dbicons
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ commands is required (although such knowledge is useful for
 exploiting the full functionality of the package).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,24 +44,11 @@ exploiting the full functionality of the package).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.16-2
-+ Revision: 755230
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.16-1
-+ Revision: 719342
-- texlive-pst-dbicons
-- texlive-pst-dbicons
-- texlive-pst-dbicons
-- texlive-pst-dbicons
-
