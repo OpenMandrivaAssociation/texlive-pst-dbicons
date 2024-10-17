@@ -3,7 +3,7 @@ Version:	17556
 Release:	2
 Summary:	Support for drawing ER diagrams
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-dbicons
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-dbicons
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-dbicons.doc.r%{version}.tar.xz
